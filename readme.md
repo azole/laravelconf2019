@@ -18,7 +18,7 @@ php artisan migrate
 import questions table from storage/questions.sql
 
 
-Please reference:
+Please refer to:
 
 - routes/web.php
 - app/Http/Controllers/QuestionController.php
