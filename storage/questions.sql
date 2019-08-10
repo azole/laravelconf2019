@@ -1,0 +1,78 @@
+-- Adminer 4.7.1 MySQL dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+SET NAMES utf8mb4;
+
+
+INSERT INTO `questions` (`id`, `level`, `time`, `question`, `option1`, `option2`, `option3`, `answer`, `comment`, `reward`, `type`, `created_at`, `updated_at`) VALUES
+(1,	'L1',	'全天',	'一個孕婦要懷胎十月才能生下一個小孩，那十個孕婦需要幾個月才能生下小孩？',	'1個月',	'10個月',	'15個月',	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(2,	'L1',	'全天',	'目前 Laravel 最新版是多少？',	'5.8',	'7',	'4.8',	'A',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(3,	'L1',	'全天',	'PHP 怎麼輸出字串',	'print(str)',	'console.log(str)',	'echo $str',	'C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(4,	'L1',	'全天',	'PHP 的變數需要用哪個符號開頭',	'錢',	'很多錢',	'$',	'C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(5,	'L1',	'16:15',	'PHPStorm 的官網稱呼 PHPStorm 為：',	'The Lightning-Speed PHP IDE',	'The Lightning-Storm PHP IDE',	'The Lightning-Smart PHP IDE',	'C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(6,	'L1',	'全天',	'以下哪位是 Laravel 爸爸？',	'Tony Stark',	'Taylor Otwell',	'Bruce Wayne',	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(7,	'L1',	'全天',	'以下哪個指令用來安裝package',	'php artisan',	'php',	'composer',	'C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(8,	'L2',	'全天',	'如果有 route 不想要 csrf token 的保護，可以在哪邊設定？',	'middleware > VerifyCsrfToken > except',	'middleware > VerifyCsrfToken > allow',	'middleware > VerifyCsrfToken > disallow',	'A',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(9,	'L2',	'全天',	' dd() 的作用是什麼？',	'print date',	'dump & die',	'delete model',	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(10,	'L2',	'全天',	'{{ $content }} 跟 {!! $content !!} 差別是什麼？',	'沒有差別',	'{!! $content !!} 比較潮',	'{!! $content !!} 允許 html tag',	'C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(11,	'L2',	'全天',	'怎麼開啟 Laravel maintain 模式？',	'php artisan down',	'php web close',	'rm -rf /',	'A',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(12,	'L2',	'全天',	'取得請求路徑？',	'$request->all()',	'$request->path()',	'Auth:id()',	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(13,	'L2',	'全天',	'以下哪種用法在新版本改掉了',	'{{ $str or \'str\' }}',	'{{ $str ??  \'str\' }}',	'{{ $str ||  \'str\' }}',	'A',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(14,	'L2',	'16:15',	'Xdebug 「不」具備下列哪個功能？',	'stack traces',	'set stop point',	'remote debugging',	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(15,	'L2',	'全天',	'array_count_values的用途',	'計算總和',	'計算value出現的次數',	'計算key出現的次數',	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(16,	'L2',	'全天',	'當 mysql 中的表格名稱是 users 時，預設對應的 Model class 名稱是 User，如果不符合這個規範，應該在 model 中設定哪一個屬性？',	'$table',	'$mapping',	'不能修改',	' A',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(17,	'L2',	'全天',	'eloquent 中的 find 的用途是 \"Retrieve a model by its primary key\"，請問如果有多個 primary keys 想要檢視，可以怎麼做？',	'$users = User::findMore([1,2,3]);',	'$users = User::find([1,2,3]);',	'$users::fetchMutiple([1,2,3])',	'B',	'find接受陣列參數',	'乖乖',	'text',	NULL,	NULL),
+(18,	'L3',	'全天',	'多對多關係：一篇 post 有多個 tags，一個 tag 有多個 posts，如果目前有一篇 post 有 tag [1, 2, 3]，這時候執行：<br>\r\n<br>\r\n$post->tags()->sync([2, 3, 4]);\r\n<br><br>\r\n請問這時候 post 的 tag 是哪些？',	'[1, 2, 3, 4]',	'[1, 2, 3]',	'[2, 3, 4]',	'C',	'Sync 用來同步多對多關係。',	'乖乖',	'text',	NULL,	NULL),
+(19,	'L2',	'全天',	'collection 用來排序的函式是？',	'orderBy',	'sortBy',	NULL,	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(20,	'L2',	'全天',	'以下哪一種寫法不合法？',	'$products = Product::where(\'category\', \'=\', 3)->get();',	'$products = Product::equal(\'category\', 3)->get();',	'$products = Product::whereCategory(3)->get();',	'B',	'',	'乖乖',	'text',	NULL,	NULL),
+(21,	'L2',	'全天',	'如果想要查看你的 laravel application 執行的每一個 SQL query，可以怎麼做？',	'DB::open(function ($query) {\r\n    // $query->sql\r\n});',	'DB::listen(function ($query) {\r\n    // $query->sql\r\n    // $query->time\r\n});',	'DB::query(function ($query) {\r\n    // $query->sql\r\n});',	'B',	NULL,	'乖乖',	'code',	NULL,	NULL),
+(22,	'L2',	'全天',	'<pre style=\"text-align:left\">\r\n$user = User::find($id);\r\nif (!$user) { \r\n    abort (404); \r\n}\r\n</pre>\r\n可以用一行程式取代，請問是？',	'$user = User::findOrThrowError($id);',	'$user = User::findOr404($id);',	'$user = User::findOrFail($id);',	' C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(23,	'L2',	'全天',	'<pre style=\"text-align:left\">\r\n$user = User::where(\'email\', $email)->first();\r\nif (!$user) {\r\n  User::create([\r\n    \'email\' => $email\r\n  ]);\r\n}\r\n</pre>\r\n可以用一行程式取代，請問是？',	'$user = User::firstOrCreate([\'email\' => $email]);',	'$user = User::create([\'email\' => $email]);',	'$user = User::getOrCreate([\'email\' => $email]);',	'A',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(24,	'L2',	'全天',	'Laravel 的 Cache 支援哪些 driver？請講出 2 個。',	NULL,	NULL,	NULL,	'',	'\"apc\", \"array\", \"database\", \"file\", \"memcached\", \"redis\", \"dynamodb\"，也可以自己 custom。',	'乖乖',	'text',	NULL,	NULL),
+(25,	'L2',	'全天',	'Laravel 的 Cache 如果要採用不同的 driver，可以怎麼做？',	'Cache::driver(\'file\')->get(...)',	'Cache::store(\'file\')->get(...)',	'Cache::save(\'file\')->get(...)',	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(26,	'L2',	'全天',	'以下哪一個「不是」從 cache 中移除 item 的方法？',	'Cache::forget(\'key\');',	'Cache::put(\'key\', \'value\', 0);\r\nCache::put(\'key\', \'value\', -5);',	'Cache::delete(\'key\');',	'C',	'',	'乖乖',	'text',	NULL,	NULL),
+(27,	'L2',	'全天',	'Laravel Queue 支援不同的 drivers，請說出其中的兩個。',	NULL,	NULL,	NULL,	'',	'\"sync\", \"database\", \"beanstalkd\", \"sqs\", \"redis\"\r\n',	'乖乖',	'text',	NULL,	NULL),
+(28,	'L2',	'全天',	'要把 Job 送到不同的 laravel queue 時，可以怎麼做？',	'Job::dispatch()->sendTo(\'emails\');',	'Job::dispatch(\'emails\');',	'Job::dispatch()->onQueue(\'emails\');',	'C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(29,	'L2',	'全天',	'ProcessPodcast 是一個 Laravel Job，當我們這樣寫的時候：ProcessPodcast::dispatch($podcast);，請問 $podcast 是會被送到哪裡？',	'ProcessPodcast Job 的建構式的參數',	'ProcessPodcast Job 的 handle 的參數',	'ProcessPodcast Job 中用 getInput 取得',	'A',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(30,	'L2',	'全天',	'如果已經執行了 php artisan serve，預設會在 port 8000 啟動專案，如果又在另外一個專案又執行了一次 php artisan serve，在 5.8 會發生什麼事？',	'會失敗而無法啟動',	'可以在 port 8001 成功啟動',	'會詢問你要用哪個 port 啟動',	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(31,	'L2',	'全天',	'在 laravel 5.8，如果我們想要叫用 Route::delete($uri, $callback); 這個 route，可以怎麼做？',	'&lt;form action=\"/foo/bar\" method=\"POST\"&gt;\r\n    &lt;input type=\"hidden\" name=\"_method\" value=\"DELETE\"&gt;\r\n    ...\r\n&lt;/form&gt;',	'&lt;form action=\"/foo/bar\" method=\"POST\"&gt;\r\n    &lt;input type=\"hidden\" name=\"_delete\" value=\"true\"&gt;\r\n    ....\r\n&lt;/form&gt;',	'&lt;form action=\"/foo/bar\" method=\"DELETE\"&gt;\r\n   ...\r\n&lt;/form&gt;',	'A',	'',	'乖乖',	'code',	NULL,	NULL),
+(32,	'L2',	'全天',	'Laravel 開啟維護模式時，可以開放特定 IP 正常使用，請問參數是哪一個？',	'--address',	'--exclude',	'--allow',	'C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(33,	'L2',	'全天',	'網站主機是多台(例如有做 load balance)的情況下要用 Laravel 做排程工作，Laravel 提供怎麼樣的機制確保排程工作在該排程時間，只會被執行一次？',	'once()',	'onOneServer()',	'runOneTime()',	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(34,	'L2',	'全天',	'Blade 裡面怎麼引用 Service',	'@include',	'@inject',	'@use',	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(35,	'L2',	'16:15',	'演講中所列出 trace code 最常用的快捷鍵，「不」包含下面哪一組？',	'⇧⇧（Shift＋Shift）',	'⌘+F（Ctrl＋F）',	'⇧⌘F（Ctrl＋Shift＋F）',	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(36,	'L2',	'全天',	'在 laravel model 最快可以複製一個 model 的做法是？',	'// 用 clone\r\n$task = Tasks::find(1);\r\n$newTask = $task->clone();\r\n$newTask->save();',	'// 用 replicate\r\n$task = Tasks::find(1);\r\n$newTask = $task->replicate();\r\n$newTask->save();',	'// 用 duplicate\r\n$task = Tasks::find(1);\r\n$newTask = $task->duplicate();\r\n$newTask->save();',	'B',	NULL,	'乖乖',	'code',	NULL,	NULL),
+(37,	'L2',	'全天',	'排程任務 schedule task 要設定時區的話是用哪個函式？',	'$schedule->command(\'report:generate\')\r\n         ->timezone(\'America/New_York\')\r\n         ->at(\'02:00\')',	'protected function scheduleTimezone()\r\n{\r\n    return \'America/Chicago\';\r\n}',	NULL,	'A, B',	'A是單一任務指定，B是全域',	'乖乖',	'code',	NULL,	NULL),
+(38,	'L3',	'全天',	'有一個排程任務 schedule task 是每分鐘執行一次，但執行一次的時間不定，有可能會超過一分鐘，但我們又不希望同一時間有多個任務在執行，應該要加上哪個函式？',	'$schedule->command(\'emails:send\')->onOneServer();',	'$schedule->command(\'emails:send\')->once();',	'$schedule->command(\'emails:send\')->withoutOverlapping();',	'C',	'有加上參數的話，就是 lock 住幾分鐘，預設是 24 小時。\r\n$schedule->command(\'emails:send\')->withoutOverlapping(10);',	'乖乖',	'code',	NULL,	NULL),
+(39,	'L2',	'全天',	'如果排程任務 schedule task 執行失敗，我們想要讓他寄送 email 通知我們，應該要用哪個函式？',	'emailOutputOnFailure(\'foo@example.com\');',	'emailOutputTo(\'foo@example.com\', \'Error\');',	'sendOutputTo(\'foo@example.com\', \'Error\')',	'A',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(40,	'L2',	'全天',	'如果想從 laravel cache 中讀出一個 item 然後就把它從 cache 中刪除掉，應該用哪個函式？',	'$value = Cache::delete(\'key\');',	'$value = Cache::retrieve(\'key\');',	'$value = Cache::pull(\'key\');',	'C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(41,	'L2',	'全天',	'ProcessPodcast 是一個 Laravel Job，當我們這樣寫的時候，會發生什麼事？\r\nProcessPodcast::dispatch($podcast)\r\n                ->delay(now()->addMinutes(10));',	'queue job 每 10 分鐘執行一次。',	'queue job 會延遲 10 秒鐘才被執行。',	'queue job 會延遲 10 分鐘才被執行。',	'C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(42,	'L2',	'全天',	'如果你有一組 Job 想要被連續地執行，例如必須要先建立訂單，建立成功後就處理金流，處理金流成功就出貨，一但有一個任務失敗，後續任務就不要執行，可以用什麼函式做到呢？',	'CreateOrder::withChain([\r\n    new ProcessPayment,\r\n    new ShipOrder\r\n])->dispatch();',	'CreateOrder::dispatch([\'ProcessPayment\', \'ShipOrder\']);',	'CreateOrder::dispatch()\r\n    ->after(\'ProcessPayemnt\')\r\n    ->after(\'ShipOrder\');',	'A',	NULL,	'乖乖',	'code',	NULL,	NULL),
+(43,	'L2',	'全天',	'執行 php artisan storage:link 後會發生什麼事？(預設情況下）',	'會在 public 檔案夾裡建立一個 link 到 storage/app/public',	'會在 public 檔案夾裡建立一個 link 到 storage/public',	'會在 storage 檔案夾裡建立一個連結到 public/storage',	'A',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(44,	'L2',	'全天',	'Route::redirect 會回傳 http status code 302，如果我們想要 status code 是 301，可以怎麼做？',	'Route::redirect(\'/here\', \'/there\')->code(301);',	'Route::permanentRedirect(\'/here\', \'/there\');',	'Route::redirect(\'/here\', \'/there\', 301);',	'B, C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(45,	'L3',	'全天',	'{{ $post->author->name }} 當 author 被刪除或某些原因不存在時，這一行會發生錯誤 \"property of non-object\"，以下哪一種方式「無法」防範這個問題？',	'public function author()\r\n{\r\n    return $this->belongsTo(\'App\\Author\')->withDefault();\r\n}',	'{{ $post->author->name ?? \'\' }}',	'{{ $post->author->withDefault()->name }}',	'C',	NULL,	'其他',	'code',	NULL,	NULL),
+(46,	'L3',	'全天',	'如果想要在 laravel cache 採用原子鎖(atomic lock)的功能，請問 driver 設定成 file 的話可以嗎？',	'Yes',	'No',	'沒有原子鎖的功能',	'B',	'只有 memcached, dynamodb, or  redis 才能有原子鎖的功能。',	'其他',	'text',	NULL,	NULL),
+(47,	'L3',	'全天',	'請問以下哪一個不是 laravel cache 可以監聽的事件？',	'LogCacheHit',	'LogCacheTimeout',	'LogKeyForgotten',	'B',	NULL,	'其他',	'text',	NULL,	NULL),
+(48,	'L2',	'全天',	'修改了 Queue Job 的程式後，部署到主機去，整個過程都沒有發生錯誤、程式碼在本機測試也都沒有問題，但新版的程式卻沒有生效，最有可能的原因是什麼？',	'queue work 沒有重啟',	'沒有放乖乖',	NULL,	'A',	NULL,	'其他',	'text',	NULL,	NULL),
+(49,	'L2',	'全天',	'Laravel 在 JSON serialization 時，要怎麼客製日期格式？',	'Carbon::serializeUsing(function ($carbon) {\r\n    return $carbon->format(\'U\');\r\n});',	'model::serializeDate(function($carbon) {\r\n    return $carbon->format(\'U\')\r\n});',	NULL,	'A',	NULL,	'其他',	'code',	NULL,	NULL),
+(51,	'L3',	'全天',	'如果同一時間有多個排程任務 schedule task要執行，他們會被循序執行，如果其中有一個要執行的比較久，那就會卡住後面的工作，請問要怎麼解決這個問題？',	'$schedule->command(\'analytics:report\')\r\n         ->daily()\r\n         ->runInBackground();',	'$schedule->command(\'analytics:report\')\r\n         ->daily()\r\n         ->nonBlock();',	'$schedule->command(\'analytics:report\')\r\n         ->daily()\r\n         ->skip();',	'A',	'runInBackground 可以讓工作變成背景執行，以免阻塞住其他工作。',	'其他',	'code',	NULL,	NULL),
+(52,	'L3',	'全天',	'Cache::add(\'key\', \'value\', $seconds); 的作用是什麼？\r\n\r\n以下哪個最正確？',	'在 cache 中不存在 key 才會儲存進去，已存在就不會儲存。',	'在 cache 中建立這個 key 的 value。',	'在 cache 中對這個 key 的 TTL 增加 seconds 秒數。',	'A',	'在 cache 中不存在 key 才會儲存進去。如果不存在而真的儲存了，會回傳 true，否則會回傳 false。',	'其他',	'text',	NULL,	NULL),
+(53,	'L3',	'全天',	'Route::fallback 的作用是什麼？',	'在找不到對應的 route 時回 404',	'如果使用者選擇的語言不在系統設定中，就會落到這裡來處理。',	'在找不到對應的 route 時，會落到這個函式，這樣可以在這邊掛一些 middleware 來進行必要的處理。',	'C',	'you may define a route that will be executed when no other route matches the incoming request.',	'其他',	'text',	NULL,	NULL),
+(54,	'L3',	'16:15',	'Doctrine 的 Inflector，是從什麼 PHP 框架，借用了英文單詞的單複數文法實作方式？',	'CakePHP',	'Yii2',	'Laravel',	'A',	NULL,	'其他',	'text',	NULL,	NULL),
+(55,	'L3',	'16:15',	'如果呼叫某物件不存在的函式，php 會往下找哪個 magic method 來處理？',	'__call',	'__invoke',	'__wakeup',	'A',	NULL,	'其他',	'text',	NULL,	NULL),
+(56,	'L2',	'15:00',	'如果要提升 laravel 專案的效能，有一種方法是跟設定檔有關，請問是以下哪一種？',	'php artisan config:clear',	'php artisan config:cache',	'php artisan route:cache',	'B',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(57,	'L2',	'15:00',	'Albert 在「Laravel 在高併發下的系統架構與性能優化」分享了幾種 laravel 優化的方式，請問以下哪一種不是？',	'Async Event',	'Opcache',	'Prepare 100 servers',	'C',	'',	'乖乖',	'text',	NULL,	NULL),
+(58,	'L2',	'15:00',	'以下哪一項不是 Microservices 的優點？',	'低耦合、高內聚',	'易於擴展',	'容易維運',	'C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(59,	'L2',	'10:55',	'以下哪一種「不是」create collection 的方式？',	'$collection = Collection::wrap([1, 2, 3]);',	'$collection = collect([1, 2, 3]);',	'$collection = Collection::create([1, 2, 3]);',	'C',	'正確的方式是 $collection = Collection::make([1, 2, 3]);',	'乖乖',	'text',	NULL,	NULL),
+(60,	'L2',	'10:55',	'collect() 是以下哪一種？',	'Support/Collection',	'Eloquent/Collection',	'Data/Collection',	'A',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(61,	'L2',	'10:55',	'<pre style=\"text-align:left\">\r\n$collection = collect([1, 2, 3, 4])\r\n    ->map(function($i) {\r\n        return i * 2;\r\n    });\r\n</pre>\r\n請問這段程式碼執行過後，$collection 是什麼？',	'[1, 2, 3, 4]',	'[2, 4]',	'[2, 4, 6, 8]',	'C',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(62,	'L2',	'10:55',	'<pre style=\"text-align:left\">\r\n$collection = collect([1, 2, 3, 4])\r\n    ->filter(function($i) {\r\n        return i < 3;\r\n    });\r\n</pre>\r\n請問這段程式碼執行過後，$collection 是什麼？',	'[1, 2]',	'[1, 2, 4]',	'[3, 4]',	'A',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(63,	'L3',	'10:55',	'<pre style=\"text-align:left\">\r\n$result = collect([1, 2, 3, 4, 5])\r\n    ->reduce(function($carry, $i) {\r\n        return $carry + $i;\r\n    }, 2);\r\n</pre>\r\n請問這段程式碼執行過後，$result 是什麼？',	'17',	'15',	'12',	'A',	NULL,	'乖乖',	'text',	NULL,	NULL),
+(64,	'L2',	'10:55',	'<pre style=\"text-align:left\">\r\n$data= [\r\n    [1, 2],\r\n    3,\r\n    [4, [5,6]]\r\n];\r\n$flatten = collect($data)->flatten(2);\r\n</pre>\r\n請問這段程式碼執行過後，$flatten 是什麼？',	'[1, 2, 3, 4, 5, 6]',	'[1, 2, 3, 4, [5, 6]]',	'[[1, 2], 3, 4, [5, 6]]',	'A',	'',	'乖乖',	'text',	NULL,	NULL),
+(65,	'L2',	'10:55',	'<pre style=\"text-align:left\">\r\n[$partOne, $partTwo] = collect([\'a\', \'b\', \'c\', \'d\'])->chunk(3);\r\n</pre>\r\n請問這段程式碼執行過後，$partTow 是什麼？',	'[\'b\', \'c\', \'d\']',	'[\'d\']',	'會發生錯誤',	'B',	'',	'乖乖',	'text',	NULL,	NULL),
+(66,	'L3',	'10:55',	'<pre style=\"text-align:left\">\r\n$result = collect([1, 2, 3, 4])\r\n    ->reduce(function($carry, $i) {\r\n        return $carry * $i;\r\n    });\r\n</pre>\r\n請問這段程式碼執行過後，$result 是什麼？',	'24',	'0',	'10',	'B',	'沒有給初始值的話，預設是 0，所以怎麼乘都是 0 ',	'乖乖',	'text',	NULL,	NULL);
+
+-- 2019-08-10 11:05:07
