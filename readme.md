@@ -1,6 +1,8 @@
 # Laravel Conf 2019
 
-database: storage/questions.sql
+for Laravel conf Taiwan 2019
+
+https://laravelconf.tw/
 
 
 ## install
@@ -15,3 +17,10 @@ php artisan migrate
 
 import questions table from storage/questions.sql
 
+
+Please reference:
+
+- routes/web.php
+- app/Http/Controllers/QuestionController.php
+- resources/views/index.blade.php
+- resources/views/show.blade.php
